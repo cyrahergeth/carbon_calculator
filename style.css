@@ -1,0 +1,196 @@
+/* General styling for the body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Styling the container of the calculator */
+#calculator-container {
+    padding: 20px; /* Adds padding inside the container for spacing */
+    border-radius: 8px; /* Makes the corners of the container rounded */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the container for depth */
+    max-width: 400px; /* Sets the maximum width of the container */
+    width: 100%; /* Makes the container take up 100% of its parent's width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling the form elements */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styling the labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #444444; /* Slightly lighter gray color for labels */
+}
+
+/* Styling the button */
+button {
+    padding: 10px;
+    background-color: #5f63c7; /* Color of next and back button */
+    color: white; /* White text color for buttons */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    <!--margin-right:400px;-->
+
+}
+
+
+
+button:hover {
+    background-color: #042fb3; /* dark blue  */
+}
+
+/* Styling the result display */
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #366138; /* lighter blue, color of: Your estimated annual carbon emissions are */
+    display: none;
+
+}
+
+/* Updated CSS for options buttons */
+
+.options button {
+    background-color: #7d9c77; /* Color of multiple choice buttons */
+    border: 2px solid #7d9c77;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make all buttons the same length */
+    color: #ffffff; /* White text color for option buttons */
+}
+
+/* Keep selected button dark */
+.options button.selected {
+    background-color: #366138; /* color of selected answer */
+    color: white;
+}
+
+/* Lighter on hover only if not selected */
+.options button:hover:not(.selected) {
+    background-color: #366138; /* color of hover before pressing the answer */
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 100px auto;
+  padding: 40px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #d7e5d2; /* color of big square container */
+    border-radius: 10px;
+}
+
+/* Progress bar styling */
+.progress-bar-container {
+    width: 100%;
+    background-color: #f3f3f3; /* color of background of progress bar */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    height: 40px;
+}
+
+.progress-bar {
+    height: 40px;
+    background-color: #7d9c77; /* color of progress bar */
+    width: 0%;
+    transition: width 0.5s ease;
+
+    bottom: 0;
+}
+
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 40px;
+}
+
+.progress-step {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc; /* color of round balls in progress bar fix tho */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.progress-step.active {
+    background-color: #7d9c77; /* color of progress made */
+}
+
+/* Question styling */
+.question {
+    display: none;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateX(0);
+    opacity: 1;
+    width: 100%;
+}
+
+.question.active {
+    display: block;
+}
+
+.question-container {
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+/* Input range styling */
+input[type="range"] {
+    width: 100%;
+}
+
+#resultContent {
+    color: #366138; /* Dark green color for result text */
+}
+
+
+.back-button-container {
+    flex: 1;
+    text-align: left; /* Keeps "Back" button aligned to the left and "Done" aligned right */
+}
+
+.done-button-container {
+    flex: 1;
+    text-align: right; /* Aligns the "Done" button to the right */
+    position: relative; /* or `absolute`, depending on the context */
+
+
+}
+
